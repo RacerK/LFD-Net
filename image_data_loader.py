@@ -1,3 +1,4 @@
+# Reference list: hayatkhan8660-maker. 2022. Light-DehazeNet. GitHub. https://github.com/hayatkhan8660-maker/Light-DehazeNet
 import os
 import torch
 import torch.utils.data as data
@@ -17,8 +18,11 @@ def preparing_training_data(hazefree_images_dir, hazeeffected_images_dir):
 	data_holder = {}
 
 	for h_image in hazy_data:
+		# Some images may have more or fewer channels than three (e.g. grayscale or RGBA images).
+		# These images should be either skipped or treated using an alternative preprocessing method.
 		if Image.open(os.path.join(hazeeffected_images_dir, h_image)).mode != 'RGB':
 			continue
+		# It is required that the clear and hazy image pairs have the same file name or at least the same prefix.
 		h_image = h_image.split("/")[-1]
 		id_ = h_image.split("_")[0] + '.jpg'
 		if Image.open(os.path.join(hazefree_images_dir, id_)).mode != 'RGB':
@@ -63,7 +67,6 @@ class hazy_data_loader(data.Dataset):
 		else:
 			self.data_dict = self.validation_data
 			print("Number of Validation Images:", len(self.validation_data))
-
 
 	def __getitem__(self, index):
 

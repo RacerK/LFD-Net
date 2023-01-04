@@ -1,3 +1,4 @@
+# Reference list: hayatkhan8660-maker. 2022. Light-DehazeNet. GitHub. https://github.com/hayatkhan8660-maker/Light-DehazeNet
 import torch
 import torch.nn as nn
 import torchvision
