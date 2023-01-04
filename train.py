@@ -25,9 +25,11 @@ def train(args):
     lfd_net = model.LFD_Net().cuda()
     lfd_net.apply(weights_init)
 
-    # path = 'trained_weights/outdoor.pth'
-    # checkpoint = torch.load(path, map_location=device)
-    # lfd_net.load_state_dict(checkpoint)
+    """
+    path = 'trained_weights/outdoor.pth'
+    checkpoint = torch.load(path, map_location=device)
+    lfd_net.load_state_dict(checkpoint)
+    """
 
     training_data = image_data_loader.hazy_data_loader(args["train_original"], args["train_hazy"])
     validation_data = image_data_loader.hazy_data_loader(args["train_original"], args["train_hazy"], mode="val")

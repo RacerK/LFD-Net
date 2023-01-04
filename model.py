@@ -42,12 +42,12 @@ class LFD_Net(nn.Module):
         # mainNet Architecture
         self.relu = nn.LeakyReLU(inplace=True)
 
-        self.conv_layer1 = nn.Conv2d(3,32,3,1,1,bias=True)
-        self.conv_layer2 = nn.Conv2d(32,32,5,1,2,bias=True)
-        self.conv_layer3 = nn.Conv2d(32,32,7,1,3,bias=True)
-        # self.conv_layer4 = nn.Conv2d(64,32,3,1,1,bias=True)
-        self.conv_layer5 = nn.Conv2d(64,16,3,1,1,bias=True)
-        self.conv_layer6 = nn.Conv2d(16,3,1,1,0,bias=True)
+        self.conv_layer1 = nn.Conv2d(3, 32, 3, 1, 1, bias=True)
+        self.conv_layer2 = nn.Conv2d(32, 32, 5, 1, 2, bias=True)
+        self.conv_layer3 = nn.Conv2d(32, 32, 7, 1, 3, bias=True)
+        # self.conv_layer4 = nn.Conv2d(64, 32, 3, 1, 1, bias=True)
+        self.conv_layer5 = nn.Conv2d(64, 16, 3, 1, 1, bias=True)
+        self.conv_layer6 = nn.Conv2d(16, 3, 1, 1, 0, bias=True)
 
         self.calayer = CALayer(64)
         self.palayer = PALayer(64)
@@ -59,9 +59,9 @@ class LFD_Net(nn.Module):
         x2 = self.relu(self.conv_layer2(x1))
         x3 = self.relu(self.conv_layer3(x2))
         x4 = x1 + x3
-        gates = self.gate(torch.cat((x1,x2,x4),1))
+        gates = self.gate(torch.cat((x1, x2, x4), 1))
         x6 = x1 * gates[:, [0], :, :] + x2 * gates[:, [1], :, :] + x4 * gates[:, [2], :, :]
-        x7 = torch.cat((x6,x3),1)
+        x7 = torch.cat((x6, x3), 1)
         x8 = self.calayer(x7)
         x9 = self.palayer(x8)
         x10 = self.relu(self.conv_layer5(x9))
