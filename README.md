@@ -1,6 +1,6 @@
 # LFD-Net
 
-## Lightweight Feature-interaction Dehazing Network for Real-time Vision Tasks
+### Lightweight Feature-interaction Dehazing Network for Real-time Vision Tasks
 
 ![](readme_images/framework.png)
 
@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 This will install all the required dependencies for the code to run properly, as follows:
 
-```textile
+```
 torch==1.10.2
 torchvision==0.11.3
 PIL==9.4.0
