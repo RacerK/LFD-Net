@@ -1,10 +1,10 @@
 # LFD-Net
 
-#### Lightweight Feature-interaction Dehazing Network for Real-time Vision Tasks
+## Lightweight Feature-interaction Dehazing Network for Real-time Vision Tasks
 
 ![](readme_images/framework.png)
 
-##### Dependencies
+### Dependencies
 
 This code is developed using Anaconda python 3.6.6. To install the necessary dependencies for this code, run the following command:
 
@@ -23,13 +23,13 @@ opencv==4.6.0
 numpy=1.19.5
 ```
 
-##### Training
+### Training
 
 ```bash
 python train.py -th haze_images/ -to original_images/ -e 50 -lr 0.001
 ```
 
-##### Inferencing
+### Inferencing
 
 Place all the hazy images that need to be dehazed in the test directory and specify a destination directory for the dehazed images.
 
@@ -37,9 +37,9 @@ Place all the hazy images that need to be dehazed in the test directory and spec
 python infer_multi.py -td hazy/ -ts dehaze/ 
 ```
 
-##### Evaluation
+### Evaluation
 
-Four evaluation metrics will be applied to all dehazed and ground truth image pairs: PSNR, SSIM, CIEDE2000, and SSEQ. The results of these metrics will be written to `metrics.txt`.
+To quantitatively evaluate the dehazing performance, we apply four evaluation metrics to all dehazed and ground truth image pairs: PSNR, SSIM, CIEDE2000, and SSEQ. The results of these metrics will be recorded in the file `metrics.txt`.
 
 ```bash
 python evaluate.py -to gt/ -td dehaze/
