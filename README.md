@@ -2,7 +2,26 @@
 
 #### Lightweight Feature-interaction Dehazing Network for Real-time Vision Tasks
 
-![](framework.png)
+![](readme_images/framework.png)
+
+##### Dependencies
+
+This code is developed using Anaconda python 3.6.6. To install the necessary dependencies for this code, run the following command:
+
+```bash
+pip install -r requirements.txt
+```
+
+This will install all the required dependencies for the code to run properly, as follows:
+
+```textile
+torch==1.10.2
+torchvision==0.11.3
+PIL==9.4.0
+matplotlib==3.3.4
+opencv==4.6.0
+numpy=1.19.5
+```
 
 ##### Training
 
