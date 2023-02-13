@@ -6,7 +6,7 @@
 
 ### Dependencies
 
-This code is developed using Anaconda python 3.6.6. To install the necessary dependencies for this code, run the following command:
+This code is developed using python 3.6.6. To install the necessary dependencies for this code, run the following command:
 
 ```bash
 pip install -r requirements.txt
@@ -44,3 +44,21 @@ To quantitatively evaluate the dehazing performance, we apply four evaluation me
 ```bash
 python evaluate.py -to gt/ -td dehaze/
 ```
+
+### Experiments
+
+All the experiments were conducted on a PC with an R9-5900HX CPU (E5-1650) and an NVIDIA RTX-3080 GPU. 
+
+##### Obtained Visual Result
+
+![](readme_images/visual_comparison_SOTS.png)
+
+![alt](readme_images/visual_comparison_HSTS&OWN.png)
+
+![alt](readme_images/object_detection_outdoor.png)
+
+![alt](readme_images/object_detection_remote_sensing.png)
+
+### Notes
+
+The works we have used for reference including `LD-Net`([paper]([Light-DehazeNet: A Novel Lightweight CNN Architecture for Single Image Dehazing | IEEE Journals &amp; Magazine | IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/9562276)), [code](https://github.com/hayatkhan8660-maker/Light-DehazeNet)), `GCA-Net`([paper](https://ieeexplore.ieee.org/abstract/document/8658661), [code](https://github.com/cddlyf/GCANet)) and `FFA-Net`([paper](https://ojs.aaai.org/index.php/AAAI/article/view/6865), [code](https://github.com/zhilin007/FFA-Net)). Thanks for their wonderful works.
