@@ -2,7 +2,7 @@
 
 ### Lightweight Feature-interaction Dehazing Network for Real-time Vision Tasks
 
-![](readme_images/framework.png)
+![](readme_images/framework.jpg)
 
 ### Dependencies
 
