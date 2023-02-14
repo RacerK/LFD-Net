@@ -61,4 +61,4 @@ All the experiments were conducted on a PC with an R9-5900HX CPU (E5-1650) and a
 
 ### Notes
 
-The works we have used for reference including `LD-Net`([paper](https://ieeexplore.ieee.org/abstract/document/9562276), [code](https://github.com/hayatkhan8660-maker/Light-DehazeNet)), `GCA-Net`([paper](https://ieeexplore.ieee.org/abstract/document/8658661), [code](https://github.com/cddlyf/GCANet)) and `FFA-Net`([paper](https://ojs.aaai.org/index.php/AAAI/article/view/6865), [code](https://github.com/zhilin007/FFA-Net)). Thanks for their wonderful works.
+The works we have used for reference include `LD-Net`([paper](https://ieeexplore.ieee.org/abstract/document/9562276), [code](https://github.com/hayatkhan8660-maker/Light-DehazeNet)), `GCA-Net`([paper](https://ieeexplore.ieee.org/abstract/document/8658661), [code](https://github.com/cddlyf/GCANet)) and `FFA-Net`([paper](https://ojs.aaai.org/index.php/AAAI/article/view/6865), [code](https://github.com/zhilin007/FFA-Net)). Thanks for their wonderful works.
