@@ -49,7 +49,7 @@ python evaluate.py -to gt/ -td dehaze/
 
 All the experiments were conducted on a PC with an R9-5900HX CPU (E5-1650) and an NVIDIA RTX-3080 GPU. 
 
-##### Obtained Visual Result
+# 
 
 ![](readme_images/visual_comparison_SOTS.png)
 
