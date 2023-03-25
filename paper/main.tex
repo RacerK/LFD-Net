@@ -41,7 +41,7 @@
 \maketitle
 
 \begin{abstract}
-Single image dehazing is a challenging low-level vision task, which is required to be both effective and efficient for downstream real-time applications like autonomous driving, video surveillance and remote sensing. Existing methods usually suffer from high computation cost with densely connected residual modules. They might also struggle with color consistency and the maintenance of visual quality. To tackle these problems, we design a lightweight architecture to extract, fuse and weight multi-level features with the assistance of physics-based Atmosphere Scattering Model (ASM). Our proposed LFD-Net demonstrates strong interpretability by exploiting Gated Fusion module and attention mechanism to make interaction between multi-level representation. The evaluation on outdoor SOTS dataset reaches an average Frequency Per Second (FPS) of 54.41, nearly 8 times faster than seven most popular SOTA methods with equivalent metrics. It also improves the performance of object detection in terms of mean Average Precision when IoU = 0.5 (mAP@0.5) based on YOLOv5 by 4.73\% on DAIR-V2X, ensuring practicability and adaptability for real-time vision tasks. Our codes are available at {\color[HTML]{DD00DD} \texttt{\url{https://github.com/RacerK/LFD-Net}}}.
+Single image dehazing is a challenging low-level vision task, which is required to be both effective and efficient for downstream real-time applications like autonomous navigation, video surveillance and remote sensing. Existing methods usually suffer from high computation cost with densely connected residual modules. They might also struggle with color consistency and the maintenance of visual quality. To tackle these problems, we design a lightweight architecture to extract, fuse and weight multi-level features with the assistance of physics-based Atmosphere Scattering Model (ASM). Our proposed LFD-Net demonstrates strong interpretability by exploiting Gated Fusion module and attention mechanism to make interaction between multi-level representation. The evaluation on outdoor SOTS dataset reaches an average Frequency Per Second (FPS) of 54.41, nearly 8 times faster than seven most popular SOTA methods with equivalent metrics. It also improves the performance of object detection in terms of mean Average Precision when IoU = 0.5 (mAP@0.5) based on YOLOv5 by 4.73\% on DAIR-V2X, ensuring practicability and adaptability for real-time vision tasks. Our codes are available at {\color[HTML]{DD00DD} \texttt{\url{https://github.com/RacerK/LFD-Net}}}.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -49,7 +49,9 @@ Single Image Dehazing, real-time application, model compression, interpretablity
 \end{IEEEkeywords}
 
 \section{Introduction}
-\IEEEPARstart{N}{owadyas}, diverse vision tasks including object detection, segmentation, inpainting and compression, are having progressive results. However, their performance is limited confronted with noised, distorted or degraded image inputs under greasy weather conditions. This is because cameras absorb in decaying and scattered light rays when small particles like water vapor, sand, dust and smoke suspend in the air, which causes a decrease in information entropy\cite{makarau2014haze, zheng2022dehaze, han2021edge}. In view of this, image dehazing has been studied as a low-level task to reconstruct fog-free images from hazy inputs for pretreatment to high-level perception tasks.
+\IEEEPARstart{N}{owadyas}, diverse vision tasks including object detection, segmentation, inpainting and compression, are having progressive results. However, their performance is limited confronted with noised, distorted or degraded image inputs under greasy weather conditions. This is because cameras absorb in decaying and scattered light rays when small particles like water vapor, sand, dust and smoke suspend in the air, which causes a decrease in information entropy\cite{makarau2014haze}.
+
+Haze is a prevalent phenomenon that occurs in many parts of the world, and it has a significant impact on real-time applications. In the field of remote sensing, haze can obscure the details of the earth's surface, affecting the accuracy of various applications such as land cover mapping, change detection, and environmental monitoring. This is particularly relevant for low altitude Unmanned Aerial Vehicles (UAVs), which are often used in agriculture, forestry, and urban planning. The presence of haze can significantly reduce the effectiveness of these applications by limiting the visibility and detail of the captured images. Similarly, satellite imagery, which is widely used for environmental monitoring and disaster response, also suffers from the impact of haze. The haze in satellite imagery can significantly reduce the accuracy of data interpretation, leading to incorrect conclusions and ineffective decisions\cite{zheng2022dehaze, han2021edge}. To address the issue of haze in remote sensing and navigation, researchers have developed various methods to dehaze the images, including the use of image priors, physical models and deep learning techniques. These methods aim to remove the effects of haze from the images to improve their clarity and detail, thereby enhancing the accuracy of high-level perception tasks. 
 
 The earliest dehazing methods are mainly based on prior knowledge. For instance, in\cite{he2010single}, Dark Channel Prior makes an approximation that haze-effected pixels have at least one relatively low intensity value among RGB channels. 
 % In\cite{he2012guided}, a guided filter derived from a local linear model is addressed to smoothly preserve the edge information. In\cite{makarau2014haze}, dark-object subtraction method is developed to calculate haze thickness map on multispectral satellite data.
@@ -64,26 +66,26 @@ In\cite{liu2021semiphysical}, a semi-physical guided-filter based approach is ad
 
 Furthermore, as a physic-based model, ASM is also extensively researched and introduced in dehazing methods. It is physically-grounded for an unrestricted access to various image scenes through the estimation of global atmosphere light and transmission map. For instance, in \cite{cai2016dehazenet}, an end-to-end DehazeNet combines dark channel, maximum contract, color attenuation as well as hue disparity prior to compute the transmission map and assigns a default value to atmosphere light. In \cite{liao2018hdp}, a Haze Density Prediction Network is designed for a more accurate approximation of atmosphere light to better fit for nighttime occasions. In \cite{li2020all}, a multi-decoder framework is presented to handle multiple bad weather restoration, with rain veiling effect embedded into the conventional ASM. In \cite{jiao2021guided}, a differential guided layer is embedded with the backbone and substituted to the physical scattering equation.
 
-Besides the aforementioned methods, Generative Adversarial Networks (GANs) have also been broadly applied in image dehazing. For instance, in \cite{guo2020joint}, an integrated multi-task algorithm is proposed to jointly remove raindrop and haze from both sky and non-sky regions. In \cite{li2020deep}, the generator obtains haze-free images and captures uneven foggy features in sequential and parallel manners. In \cite{ding2021perceptual}, an inverse-reverse module is utilized to correlate diverse image styles in adversarial training. In\cite{2019AttentionGAN}, unpaired clean and hazy images are utilized for training. Additionally, attention-guided generators produce attention masks, which are fused with generation outputs to enhance image quality. These GAN-based methods perform well on synthetic image data, but might suffer from a loss of authenticity on natural hazy images. 
+In addition to traditional dehazing methods, deep learning techniques have been widely adopted in dehazing research. Among these techniques, Convolutional Neural Networks (CNNs) have been the most extensively studied architecture for deep-learning-based dehazing methods. In our method, we also use CNNs as the underlying architecture. In the second section, we will discuss the common challenges and techniques in developing CNN-based dehazing methods. Besides CNNs, Generative Adversarial Networks (GANs) have also been applied in image dehazing. For example, in \cite{guo2020joint}, an integrated multi-task algorithm is proposed to jointly remove raindrop and haze from both sky and non-sky regions. In \cite{li2020deep}, the generator is designed to capture uneven foggy features in sequential and parallel manners to obtain haze-free images. In \cite{ding2021perceptual}, an inverse-reverse module is utilized to correlate diverse image styles in adversarial training. In \cite{2019AttentionGAN}, unpaired clean and hazy images are utilized for training, and attention-guided generators produce attention masks, which are fused with generation outputs to enhance image quality. These GAN-based methods perform well on synthetic image data, but they may suffer from a loss of authenticity when applied to natural hazy images. Therefore, our method, which is CNN-based, may be more appropriate for dehazing natural hazy images.
 
-However, far less attention is paid to the computational complexity and efficiency in dehazing methods. Due to the urgent need for a context-awareness system supporting quick response confronted with extreme situations, the study of lightweight dehazing methods has become increasingly crucial. AOD-Net\cite{li2017aod} strives to concatenate multi-level features in different patterns, which is the baseline of other lightweight dehazing models. Both FAOD-Net\cite{2020FAOD} and GADO-Net\cite{GAOD} introduce depth-wise, point-wise convolution to reduce the amount of parameters and aggregate context information in pyramid pooling module. FAMED-Net\cite{2020FAMED} applies cascaded and densely connected point-wise convolutional and pooling layers at three scales. LD-Net\cite{ullah2021light} concatenates convolutional layers that have a semantic gap rather than combining adjacent layers. Besides, it leverages a Color Visible Restoration module to improve the color consistency. 
+In deep-learning-based techniques, there is a persistent challenge of the trade-off between high performance on specific datasets and generalization to diverse real-world applications. It is crucial to consider both performance and generalization when developing and evaluating potential solutions in image restoration. Although current methods may demonstrate promising results under certain conditions, their lack of efficiency and generalization capabilities render them less suitable for real-time and practical applications. Due to the urgent need for a context-awareness system supporting quick response confronted with extreme situations, the study of lightweight dehazing methods has become increasingly crucial. AOD-Net\cite{li2017aod} strives to concatenate multi-level features in different patterns, which is the baseline of other lightweight dehazing models. Both FAOD-Net\cite{2020FAOD} and GADO-Net\cite{GAOD} introduce depth-wise, point-wise convolution to reduce the amount of parameters and aggregate context information in pyramid pooling module. FAMED-Net\cite{2020FAMED} applies cascaded and densely connected point-wise convolutional and pooling layers at three scales. LD-Net\cite{ullah2021light} concatenates convolutional layers that have a semantic gap rather than combining adjacent layers. Besides, it leverages a Color Visible Restoration module to improve the color consistency. 
 
 % Our proposed Lightweight Feature-interaction Dehazing Network (LFD-Net) utilizes a cascade of convolutional layers, while focusing on the interaction of multi-level features. We adopt a feature-fusion module that uniformly takes in multi-level features generated by the cascaded convolutional layers with different kernel sizes. Besides, attention mechanism is also applied to adaptively learn the weights of inter- and intra-channel features and selectively contribute to more conducive image levels or regions. Overall, our main combinations are three-fold:
 
-Our proposed Lightweight Feature-interaction Dehazing Network (LFD-Net) utilizes convolutional layers of different kernel sizes as a sequence to extract multi-level features. The feature-interaction process is coherently addressed, which takes in, redistributes and reassigns weights to the extracted features. Each component of our network performs its own functions, but also makes interactions effectively and efficiently as a whole, contributing to the interpretability of the proposed method. Overall, our main contributions are three-fold:
+Our proposed Lightweight Feature-interaction Dehazing Network (LFD-Net) utilizes convolutional layers of different kernel sizes as a sequence to extract multi-level features. The feature-interaction process is coherently addressed, which takes in, redistributes and reassigns weights to the extracted features. Each component of our network performs its own functions, but also makes interactions effectively and efficiently as a whole. Overall, our main contributions are three-fold:
 
 \begin{itemize}
     \item[$\bullet$] Our method adopts the ASM to jointly approximate atmosphere light and transmission map to increase the authenticity of restored images as well as the inference efficiency. It incorporates the convolutional operations into more specialized modules while maintaining the conciseness.    
     % It not only has a concise structure of convolution and concatenation, but also incorporates these operations into more specialized modules for feature interaction.
-    \item[$\bullet$] Our proposed method demonstrates interpretability through the assignment of distinct tasks to each module, as evidenced by the results of our visualization and ablation experiments. The feature-interaction process makes extensive use of element-wise multiplication, presenting a potential improvement to the foundation of Convolutional Neural Networks (CNNs).
+    \item[$\bullet$] Our proposed method is designed to provide interpretability by assigning distinct tasks to each module, as demonstrated by the results of our visualization and ablation experiments. The feature-interaction process relies heavily on element-wise multiplication, which has been shown to enhance the performance of pure convolutional operations.
     % We propose a novel framework with a progressive feature extracting process, during which multi-level representations are interconnected by Gated Fusion Module with a proceeding Attention Mechanism. Complicated design of architecture or stack of sophisticated modules is avoided in our method to reduce parameters. We also conduct adequate ablation study to demonstrate the indispensability of each component in our network. 
-    \item[$\bullet$] The proposed method has been validated on various scenarios to confirm its stability, practicality, and generalization for real-world vision tasks. Our approach addresses common difficulties such as halo effect, gridding artifact, and color inconsistency, and significantly improves the performance of object detection tasks.
+    \item[$\bullet$] Our proposed method has been extensively validated across various scenarios to demonstrate its stability, practicality, and generalization for real-world vision tasks, achieving an excellent trade-off between accuracy and efficiency. Our approach effectively addresses common challenges such as halo effect, gridding artifact, and color inconsistency, resulting in significant improvements in the performance of object detection tasks.
     % We practically validate our method on various scenarios, including outdoor synthetic SOTS dataset, real-world HSTS and O-HAZE dataset. Besides, we fine-tune the pretrained weight to remote sensing domain and test on RICE1. A series of experiments confirm a strong stability and generalization of the proposed method, having overcome common difficulties like halo effect, gridding artifact or color inconsistency. Furthermore, our method also improves the performance of object detection tasks to a large extent.
 \end{itemize}
 
 \section{Related Work}
 % In the past, deep learning-based approaches have dominated the field of image restoration. A multitude of models have been proposed, each of which exhibits its own set of strengths and weaknesses. For instance, it has been observed that certain models may achieve high scores in terms of PSNR and SSIM on certain datasets, but may suffer from overfitting and not perform as well when applied to different scenarios or domains. Nonetheless, the design of these models remains highly regarded and serves as a reference for further research.
-In Deep Learning-based techniques, there is a persistent challenge of the trade-off between high performance on specific datasets and generalization to diverse real-world applications. Although current methods may demonstrate promising results under certain conditions, their lack of efficiency and generalization capabilities render them less unsuitable for real-time and practical applications. Hence, it is significant to consider both performance and generalization when developing and evaluating potential solutions in this field. We introduce the efforts taken in terms of feature extraction and utilization in the first two sections, and present the evaluation metrics for assessing the performance from a multidimensional perspective in the third section.
+Previous research has shown that deep learning techniques have achieved superior results in dehazing tasks. Our approach considers image dehazing as an image restoration task that utilizes deep learning techniques, with emphasis on the feature extraction and feature utilization processes, as discussed in the first two parts of this section. Moreover, the evaluation metrics used to assess the performance of dehazing methods are crucial and should consider multiple dimensions, as described in the third part of this section.
 
 \subsection{Feature Extraction}
 One of the key challenges in image reconstruction is the extraction of multi-level or multi-scale features, which can be facilitated by the use of a symmetric encoder-decoder structure. The U-Net architecture, originally designed for effective extraction of context information at different scales or levels \cite{ronneberger2015u}, has been widely used as a backbone in various reconstruction tasks. In \cite{dong2020multi}, the Strengthen-Operate-Subtract boosting strategy is incorporated into the decoder, and a dense feature fusion module utilizing a back-projection feedback scheme is leveraged to compensate the missing spatial information from high-resolution features. In \cite{yang2019wavelet}, the U-Net architecture is modified to incorporate discrete wavelet transform and inverse discrete wavelet transform in place of conventional down-sampling and up-sampling. In \cite{feng2021urnet}, hybrid convolution is applied in the U-Net encoder, which combines standard convolution with dilated convolution, to expand the receptive field and extract image features with more detail.
@@ -133,7 +135,7 @@ To be specific, $K$ is the intermediate evaluation parameter of the network. Our
 \subsection{Network Design}
 The proposed LFD-Net differs from heavyweight frameworks or other lightweight frameworks due to its concise method of feature extraction and interaction, as depicted in Fig. \ref{sample}.
 
-In CNNs, convolution kernels with different sizes extract multi-level features. To be specific, small-sized kernels cope with local features, while large-sized kernels address global features. The most commonly used kernel size is $3 \times 3$. However, it is not effective enough to stack convolutional layers with this typical kernel size in lightweight models. In \cite{ullah2021light}, different kernel sizes ranging from $1\times 1$, $3\times 3$, $5\times 5$ to $7\times 7$ are utilized alternatively. Besides, concatenation layers are introduced at three different stages to combine the low- with high-level features, which compensates for the loss of information from initial layers as the network proceeds deeper. Therefore, the formation of convolutional and concatenation layers are crucial and can be flexibly designed to meet with specific needs. In our proposed method, we benefit from this design concept. Different from existing methods, we further simplify the formation of convolutional layers in feature extracting process. We also introduce feature-interaction strategies as opposed to merely using convolutional and concatenation layers, including the Gated Fusion Module and Attention Mechanism. 
+In CNNs, convolution kernels of varying sizes are used to extract features at different levels of abstraction. Specifically, smaller-sized kernels are effective at capturing local features, while larger-sized kernels are better suited to capturing features with a larger receptive field, which can be thought of as more global features. The most commonly used kernel size is $3 \times 3$. However, it is not effective enough to stack convolutional layers with this typical kernel size in lightweight models. In \cite{ullah2021light}, different kernel sizes ranging from $1\times 1$, $3\times 3$, $5\times 5$ to $7\times 7$ are utilized alternatively. Besides, concatenation layers are introduced at three different stages to combine the low- with high-level features, which compensates for the loss of information from initial layers as the network proceeds deeper. Therefore, the formation of convolutional and concatenation layers are crucial and can be flexibly designed to meet with specific needs. In our proposed method, we benefit from this design concept. Different from existing methods, we further simplify the formation of convolutional layers in feature extracting process. We also introduce feature-interaction strategies as opposed to merely using convolutional and concatenation layers, including the Gated Fusion Module and Attention Mechanism. 
 
 To be specific, in feature extraction, a sequence of convolutional layers with ascending kernel sizes is implemented, ranging from $3 \times 3$, $5 \times 5$ to $7 \times 7$, namely \textit{Conv 1}, \textit{Conv 2} and \textit{Conv 3}. A residual connection is utilized between \textit{Conv 1} and \textit{Conv 3} to refine the characteristic representations between low- and high-level features.
 
@@ -233,6 +235,65 @@ RESIDE is a novel benchmark for single-image de-noising consisting of synthetic 
 To further assess the generalization of our proposed method, we also conduct evaluations on O-HAZE, which consists of 45 real outdoor scenes recorded over an extended period of time, spanning more than eight weeks under both cloudy and sunny conditions. We also randomly select hazy images from the internet to supplement our test results. Additionally, to verify the effectiveness of LFD-Net in the domain of remote sensing, we fine-tune the pretrained model on ordinary outdoor scenarios using the Aerial Image dataset (AID) \cite{xia2017aid}, a large-scale dataset for aerial scene classification containing 10,000 images. We utilize the first part of Remote sensing Image Cloud rEmoving dataset (RICE)\cite{lin2019rice}, comprising 500 pairs of hazy and clear images from various regions of the world under diverse conditions for test.
 
 To validate the effectiveness of our method for real-time vision tasks, we evaluate its performance on the DAIR-V2X dataset \cite{yu2022dair} for ordinary outdoor scenarios and the VisDrone2019 dataset \cite{du2019visdrone} for remote sensing scenarios. The DAIR-V2X dataset is the first large-scale, multi-modality, multi-view dataset for Vehicle-Infrastructure Cooperative Autonomous Driving, consisting of 71,254 LiDAR frames and camera frames from real-world scenarios. The VisDrone2019 dataset consists of 8,599 images captured by drone platforms in various locations at different heights, with over 540,000 annotations in ten categories.
+
+\begin{table}[p!th]
+    \caption{Average Comparison of Metrics on SOTS for 492 JPG Images\label{tab:sots}}
+    \centering
+    \begin{tabular}{cccccc}
+    \hline
+    &PSNR$\uparrow$ & SSIM$\uparrow$ & CIEDE$\downarrow$ & $\Delta$SSEQ $\downarrow$ & FPS$\uparrow$ \\
+    \hline
+    AOD-Net                 & 19.45 & 0.8593 & 7.12 & 0.0080 & \textbf{56.85} \\
+    GridDehazeNet           & \underline{25.07} & \textbf{0.9108} & \textbf{4.02} & 0.0074 & 10.04 \\
+    Wavelet-U-Net           & 23.73 & 0.8661 & 4.93 & 0.0064 &  8.28 \\
+    GCA-Net                 & 22.13 & 0.8766 & 6.19 & \underline{0.0058} & 23.01 \\    
+    FFA-Net                 & 19.36 & 0.8472 & 7.70 & 0.0131 &  6.91 \\
+    LD-Net                  & 18.62 & 0.8380 & 7.52 & 0.0075 & 45.44 \\
+    D4                      & 18.09 & 0.6668 & 8.36 & 0.0624 & 44.79 \\
+    LFD-Net                 & \textbf{25.12} & \underline{0.9087} & \underline{4.24} & \textbf{0.0054} & \underline{54.41} \\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[p!th]
+    \caption{Average Comparison of Metrics on O-HAZE for 45 JPG Images\label{tab:ohaze}}
+    \centering
+    \begin{tabular}{cccccc}
+    \hline
+    &PSNR$\uparrow$ & SSIM$\uparrow$ & CIEDE$\downarrow$ & $\Delta$SSEQ $\downarrow$ & FPS$\uparrow$ \\
+    \hline
+    AOD-Net        & 15.06 & 0.5412 & 17.53 & 0.0146 & \underline{13.93} \\
+    GridDehazeNet  & 16.68 & 0.6361 & \underline{13.54} & 0.0055 & 1.09 \\
+    Wavelet-U-Net  & 15.87 & 0.5058 & 14.93 & \textbf{0.0041} & 8.66\\
+    GCA-Net        & \underline{17.24} & \underline{0.6523} & 13.81 & 0.0077 & 4.92 \\    
+    FFA-Net        & 14.62 & 0.5881 & 14.72 & 0.0067 & 1.52\\
+    LD-Net         & 14.72 & 0.5583 & 16.74 & 0.0057 & 10.62 \\
+    D4             & 11.51 & 0.2564 & 18.58 & 0.1612 & 2.70 \\
+    LFD-Net        & \textbf{17.67} & \textbf{0.6532} & \textbf{11.80} & \textbf{0.0041} & \textbf{14.65}\\
+    \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[p!th]
+    \caption{Average Comparison of Metrics on RICE1 for 500 PNG Images\label{tab:rice}}
+    \centering
+    \begin{tabular}{cccccc}
+    \hline
+    &PSNR$\uparrow$ & SSIM$\uparrow$ & CIEDE$\downarrow$ & $\Delta$SSEQ $\downarrow$ & FPS$\uparrow$ \\
+    \hline
+    AOD-Net       & 14.80 & 0.6578 & 16.73 & 0.0508 & \textbf{58.62} \\
+    GridDehazeNet & 19.14 & 0.8351 & 11.44 & 0.0021 & 5.08 \\
+    %W-U-Net       & 23.46 & 0.8553 & & &  8.28\\
+    GCA-Net       & 18.35 & 0.7237 & 15.25 & 0.0075 & 23.61 \\    
+    FFA-Net       & 19.92 & 0.8117 & \underline{10.39} & 0.0029 & 7.06 \\
+    MSBDN         & 19.77 & 0.8477 & 10.65 & 0.0022 & 21.38 \\ % \cite{msbdn2020}
+    %LD-Net        & 18.63 & 0.8380 & & & 45.60\\
+    D4            & 19.29 & 0.8258 & 12.21 & 0.0202 & 15.59\\
+    DehazeFormer  & \underline{19.95} & \underline{0.8615} & 10.82 & \underline{0.0018} & 4.29 \\ % \cite{dehazeformer}
+    LFD-Net       & \textbf{30.88} & \textbf{0.9420} & \textbf{3.32} & \textbf{0.0008} & \underline{45.51} \\
+    \hline
+    \end{tabular}
+\end{table}
 
 \subsection{Experiment Results}
 We faithfully reproduce 7 state-of-the-art methods for ordinary outdoor scenarios, including AOD-Net \cite{li2017aod}, GridDehazeNet \cite{liu2019griddehazenet}, Wavelet-U-Net \cite{yang2019wavelet}, GCA-Net \cite{chen2019gated}, FFA-Net \cite{qin2020ffa}, LD-Net 
@@ -484,69 +545,11 @@ We faithfully reproduce 7 state-of-the-art methods for ordinary outdoor scenario
     
 \end{figure*}
 
+
+
 In the remote sensing domain, as far as we are aware, the pretrained models of dehazing methods are not publicly available. However, we also reproduce 7 state-of-the-art methods using default outdoor weights, including AOD-Net\cite{li2017aod}, GridDehazeNet\cite{liu2019griddehazenet}, GCA-Net\cite{chen2019gated}, FFA-Net\cite{qin2020ffa}, MSBDN\cite{msbdn2020}, D4\cite{yang2022d4} and DehazeFormer\cite{dehazeformer}. As expected, AOD-Net has limited performance due to its small number of parameters, while the other methods show similar performance before being fine-tuned. We make our pretrained model open publicly for further comparison.
 
 It can be observed that a large majority of networks might suffer from obvious inconsistency within color blocks or misrepresent original information, as reflected in terms of CIEDE2000 and $\Delta$SSEQ. Specifically, other lightweight methods such as AOD-Net \cite{li2017aod} and LD-Net \cite{ullah2021light} produce relatively dark visual quality, with colors appearing darker than in the original images, making it difficult to distinguish objects. In the synthetic SOTS dataset where haze is more uniformly distributed, GCA-Net\cite{chen2019gated} encounters severe color shift occasionally. While in realistic scenarios like O-HAZE dataset, where the haze is thick and irregular, GCA-Net\cite{chen2019gated} provides remarkable dehazing effect, but still suffers from slight halo effects. FFA-Net\cite{qin2020ffa} performs well on specific datasets, but is not generalizable enough for shifted domains, lacking dehazing capability. It can be concluded that the incorporation of modules like attention mechanism prevents the image from getting uniformly dehazed without region discrepancy, compared to networks with absolute convolutional and concatenation layers. However, the stack of sophisticated modules might also lead to overfitting to some extent, not flexible enough for real-world vision tasks.   
-
-
-\begin{table}[p!th]
-    \caption{Average Comparison of Metrics on SOTS for 492 JPG Images\label{tab:sots}}
-    \centering
-    \begin{tabular}{cccccc}
-    \hline
-    &PSNR$\uparrow$ & SSIM$\uparrow$ & CIEDE$\downarrow$ & $\Delta$SSEQ $\downarrow$ & FPS$\uparrow$ \\
-    \hline
-    AOD-Net                 & 19.45 & 0.8593 & 7.12 & 0.0080 & \textbf{56.85} \\
-    GridDehazeNet           & \underline{25.07} & \textbf{0.9108} & \textbf{4.02} & 0.0074 & 10.04 \\
-    Wavelet-U-Net           & 23.73 & 0.8661 & 4.93 & 0.0064 &  8.28 \\
-    GCA-Net                 & 22.13 & 0.8766 & 6.19 & \underline{0.0058} & 23.01 \\    
-    FFA-Net                 & 19.36 & 0.8472 & 7.70 & 0.0131 &  6.91 \\
-    LD-Net                  & 18.62 & 0.8380 & 7.52 & 0.0075 & 45.44 \\
-    D4                      & 18.09 & 0.6668 & 8.36 & 0.0624 & 44.79 \\
-    LFD-Net                 & \textbf{25.12} & \underline{0.9087} & \underline{4.24} & \textbf{0.0054} & \underline{54.41} \\
-    \hline
-    \end{tabular}
-\end{table}
-
-\begin{table}[p!th]
-    \caption{Average Comparison of Metrics on O-HAZE for 45 JPG Images\label{tab:ohaze}}
-    \centering
-    \begin{tabular}{cccccc}
-    \hline
-    &PSNR$\uparrow$ & SSIM$\uparrow$ & CIEDE$\downarrow$ & $\Delta$SSEQ $\downarrow$ & FPS$\uparrow$ \\
-    \hline
-    AOD-Net        & 15.06 & 0.5412 & 17.53 & 0.0146 & \underline{13.93} \\
-    GridDehazeNet  & 16.68 & 0.6361 & \underline{13.54} & 0.0055 & 1.09 \\
-    Wavelet-U-Net  & 15.87 & 0.5058 & 14.93 & \textbf{0.0041} & 8.66\\
-    GCA-Net        & \underline{17.24} & \underline{0.6523} & 13.81 & 0.0077 & 4.92 \\    
-    FFA-Net        & 14.62 & 0.5881 & 14.72 & 0.0067 & 1.52\\
-    LD-Net         & 14.72 & 0.5583 & 16.74 & 0.0057 & 10.62 \\
-    D4             & 11.51 & 0.2564 & 18.58 & 0.1612 & 2.70 \\
-    LFD-Net        & \textbf{17.67} & \textbf{0.6532} & \textbf{11.80} & \textbf{0.0041} & \textbf{14.65}\\
-    \hline
-    \end{tabular}
-\end{table}
-
-\begin{table}[p!th]
-    \caption{Average Comparison of Metrics on RICE1 for 500 PNG Images\label{tab:rice}}
-    \centering
-    \begin{tabular}{cccccc}
-    \hline
-    &PSNR$\uparrow$ & SSIM$\uparrow$ & CIEDE$\downarrow$ & $\Delta$SSEQ $\downarrow$ & FPS$\uparrow$ \\
-    \hline
-    AOD-Net       & 14.80 & 0.6578 & 16.73 & 0.0508 & \textbf{58.62} \\
-    GridDehazeNet & 19.14 & 0.8351 & 11.44 & 0.0021 & 5.08 \\
-    %W-U-Net       & 23.46 & 0.8553 & & &  8.28\\
-    GCA-Net       & 18.35 & 0.7237 & 15.25 & 0.0075 & 23.61 \\    
-    FFA-Net       & 19.92 & 0.8117 & \underline{10.39} & 0.0029 & 7.06 \\
-    MSBDN         & 19.77 & 0.8477 & 10.65 & 0.0022 & 21.38 \\ % \cite{msbdn2020}
-    %LD-Net        & 18.63 & 0.8380 & & & 45.60\\
-    D4            & 19.29 & 0.8258 & 12.21 & 0.0202 & 15.59\\
-    DehazeFormer  & \underline{19.95} & \underline{0.8615} & 10.82 & \underline{0.0018} & 4.29 \\ % \cite{dehazeformer}
-    LFD-Net       & \textbf{30.88} & \textbf{0.9420} & \textbf{3.32} & \textbf{0.0008} & \underline{45.51} \\
-    \hline
-    \end{tabular}
-\end{table}
 
 \begin{table*}[htp]
     \caption{Ablation Experiment of LFD-Net on Outdoor SOTS Dataset\label{tab:ablation}}
