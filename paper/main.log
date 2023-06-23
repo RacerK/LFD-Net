@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.24)  25 MAR 2023 16:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.24)  23 JUN 2023 21:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -258,13 +258,7 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 \Gin@req@width=\dimen183
 ) (d:/texlive/2022/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
-) (d:/texlive/2022/texmf-dist/tex/latex/cite/cite.sty
-LaTeX Info: Redefining \cite on input line 302.
-LaTeX Info: Redefining \nocite on input line 332.
-Package: cite 2015/02/27  v 5.5
-) (d:/texlive/2022/texmf-dist/tex/latex/utfsym/utfsym.sty
-Package: utfsym 2020/10/22 Use TikZ to support icons from Unicode blocks 
- (d:/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (d:/texlive/2022/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
  (d:/texlive/2022/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
@@ -279,7 +273,13 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
-) (d:/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (d:/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (d:/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (d:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+) (d:/texlive/2022/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+) (d:/texlive/2022/texmf-dist/tex/latex/utfsym/utfsym.sty
+Package: utfsym 2020/10/22 Use TikZ to support icons from Unicode blocks 
+ (d:/texlive/2022/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (d:/texlive/2022/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (d:/texlive/2022/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (d:/texlive/2022/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks29
 \pgfutil@tempdima=\dimen184
 \pgfutil@tempdimb=\dimen185
@@ -2161,20 +2161,20 @@ LaTeX Warning: Unused global option(s):
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 -- Lines per column: 58 (exact).
 Package caption Info: Begin \AtBeginDocument code.
@@ -2201,34 +2201,34 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \symgns@font=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/ptm/m/n --> TS1/ptm/b/n on input line 20.
-Package gensymb Info: Math companion symbols declared on input line 20.
-LaTeX Info: Redefining \degree on input line 20.
-LaTeX Info: Redefining \celsius on input line 20.
-Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 20.
-LaTeX Info: Redefining \ohm on input line 20.
-Package gensymb Info: Using \textohm for \ohm on input line 20.
-Package gensymb Info: Using \textmu for \micro on input line 20.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 44.
+(Font)                  TS1/ptm/m/n --> TS1/ptm/b/n on input line 21.
+Package gensymb Info: Math companion symbols declared on input line 21.
+LaTeX Info: Redefining \degree on input line 21.
+LaTeX Info: Redefining \celsius on input line 21.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 21.
+LaTeX Info: Redefining \ohm on input line 21.
+Package gensymb Info: Using \textohm for \ohm on input line 21.
+Package gensymb Info: Using \textmu for \micro on input line 21.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 45.
  (d:/texlive/2022/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
  (d:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
  (d:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 44.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 45.
  (d:/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 <sample.png, id=4, 413.1435pt x 333.04425pt>
 File: sample.png Graphic file (type png)
 <use sample.png>
-Package pdftex.def Info: sample.png  used on input line 62.
+Package pdftex.def Info: sample.png  used on input line 57.
 (pdftex.def)             Requested size: 241.84842pt x 194.95969pt.
 
 Underfull \vbox (badness 1715) has occurred while \output is active []
@@ -2237,260 +2237,260 @@ Underfull \vbox (badness 1715) has occurred while \output is active []
 
 
  <./sample.png>] [2] [3]
-<figure1_x.jpg, id=27, 1609.57335pt x 634.41016pt>
+<figure1_x.jpg, id=28, 1609.57335pt x 634.41016pt>
 File: figure1_x.jpg Graphic file (type jpg)
 <use figure1_x.jpg>
-Package pdftex.def Info: figure1_x.jpg  used on input line 144.
+Package pdftex.def Info: figure1_x.jpg  used on input line 166.
 (pdftex.def)             Requested size: 516.0pt x 203.37357pt.
 
 Underfull \vbox (badness 2735) has occurred while \output is active []
 
  [4 <./figure1_x.jpg>]
-<figure2.png, id=31, 1336.39275pt x 833.514pt>
+<figure2.png, id=32, 1336.39275pt x 833.514pt>
 File: figure2.png Graphic file (type png)
 <use figure2.png>
 Package pdftex.def Info: figure2.png  used on input line 214.
 (pdftex.def)             Requested size: 199.16928pt x 124.22044pt.
  [5 <./figure2.png>]
-<0_1.jpg, id=37, 2820.5375pt x 414.54875pt>
+<0_1.jpg, id=38, 2820.5375pt x 414.54875pt>
 File: 0_1.jpg Graphic file (type jpg)
 <use 0_1.jpg>
-Package pdftex.def Info: 0_1.jpg  used on input line 304.
+Package pdftex.def Info: 0_1.jpg  used on input line 268.
 (pdftex.def)             Requested size: 469.47046pt x 68.9985pt.
-<0_2.jpg, id=38, 2820.5375pt x 414.54875pt>
+<0_2.jpg, id=39, 2820.5375pt x 414.54875pt>
 File: 0_2.jpg Graphic file (type jpg)
 <use 0_2.jpg>
-Package pdftex.def Info: 0_2.jpg  used on input line 307.
+Package pdftex.def Info: 0_2.jpg  used on input line 271.
 (pdftex.def)             Requested size: 469.47046pt x 68.9985pt.
-<1_1.jpg, id=39, 2820.5375pt x 414.54875pt>
+<1_1.jpg, id=40, 2820.5375pt x 414.54875pt>
 File: 1_1.jpg Graphic file (type jpg)
 <use 1_1.jpg>
-Package pdftex.def Info: 1_1.jpg  used on input line 310.
+Package pdftex.def Info: 1_1.jpg  used on input line 274.
 (pdftex.def)             Requested size: 469.47046pt x 68.9985pt.
-<1_2.jpg, id=40, 2820.5375pt x 414.54875pt>
+<1_2.jpg, id=41, 2820.5375pt x 414.54875pt>
 File: 1_2.jpg Graphic file (type jpg)
 <use 1_2.jpg>
-Package pdftex.def Info: 1_2.jpg  used on input line 313.
+Package pdftex.def Info: 1_2.jpg  used on input line 277.
 (pdftex.def)             Requested size: 469.47046pt x 68.9985pt.
-<2_1.jpg, id=41, 2820.5375pt x 414.54875pt>
+<2_1.jpg, id=42, 2820.5375pt x 414.54875pt>
 File: 2_1.jpg Graphic file (type jpg)
 <use 2_1.jpg>
-Package pdftex.def Info: 2_1.jpg  used on input line 316.
+Package pdftex.def Info: 2_1.jpg  used on input line 280.
 (pdftex.def)             Requested size: 469.47046pt x 68.9985pt.
-<2_2.jpg, id=42, 2820.5375pt x 414.54875pt>
+<2_2.jpg, id=43, 2820.5375pt x 414.54875pt>
 File: 2_2.jpg Graphic file (type jpg)
 <use 2_2.jpg>
-Package pdftex.def Info: 2_2.jpg  used on input line 319.
+Package pdftex.def Info: 2_2.jpg  used on input line 283.
 (pdftex.def)             Requested size: 469.47046pt x 68.9985pt.
-<5_1.jpg, id=43, 2820.5375pt x 414.54875pt>
+<5_1.jpg, id=44, 2820.5375pt x 414.54875pt>
 File: 5_1.jpg Graphic file (type jpg)
 <use 5_1.jpg>
-Package pdftex.def Info: 5_1.jpg  used on input line 322.
+Package pdftex.def Info: 5_1.jpg  used on input line 286.
 (pdftex.def)             Requested size: 469.47046pt x 68.9985pt.
-<5_2.jpg, id=44, 2820.5375pt x 414.54875pt>
+<5_2.jpg, id=45, 2820.5375pt x 414.54875pt>
 File: 5_2.jpg Graphic file (type jpg)
 <use 5_2.jpg>
-Package pdftex.def Info: 5_2.jpg  used on input line 325.
+Package pdftex.def Info: 5_2.jpg  used on input line 289.
 (pdftex.def)             Requested size: 469.47046pt x 68.9985pt.
-<ohaze_0_1.jpg, id=45, 8200.6375pt x 1084.05pt>
+<ohaze_0_1.jpg, id=46, 8200.6375pt x 1084.05pt>
 File: ohaze_0_1.jpg Graphic file (type jpg)
 <use ohaze_0_1.jpg>
-Package pdftex.def Info: ohaze_0_1.jpg  used on input line 335.
+Package pdftex.def Info: ohaze_0_1.jpg  used on input line 299.
 (pdftex.def)             Requested size: 469.47046pt x 62.04622pt.
-<ohaze_0_2.jpg, id=46, 8200.6375pt x 1084.05pt>
+<ohaze_0_2.jpg, id=47, 8200.6375pt x 1084.05pt>
 File: ohaze_0_2.jpg Graphic file (type jpg)
 <use ohaze_0_2.jpg>
-Package pdftex.def Info: ohaze_0_2.jpg  used on input line 338.
+Package pdftex.def Info: ohaze_0_2.jpg  used on input line 302.
 (pdftex.def)             Requested size: 469.47046pt x 62.04622pt.
-<ohaze_1_1.jpg, id=47, 7879.4375pt x 1084.05pt>
+<ohaze_1_1.jpg, id=48, 7879.4375pt x 1084.05pt>
 File: ohaze_1_1.jpg Graphic file (type jpg)
 <use ohaze_1_1.jpg>
-Package pdftex.def Info: ohaze_1_1.jpg  used on input line 341.
+Package pdftex.def Info: ohaze_1_1.jpg  used on input line 305.
 (pdftex.def)             Requested size: 469.47046pt x 64.57703pt.
-<ohaze_1_2.jpg, id=48, 7879.4375pt x 1084.05pt>
+<ohaze_1_2.jpg, id=49, 7879.4375pt x 1084.05pt>
 File: ohaze_1_2.jpg Graphic file (type jpg)
 <use ohaze_1_2.jpg>
-Package pdftex.def Info: ohaze_1_2.jpg  used on input line 344.
+Package pdftex.def Info: ohaze_1_2.jpg  used on input line 308.
 (pdftex.def)             Requested size: 469.47046pt x 64.57703pt.
-<ohaze_2_1.jpg, id=49, 8230.75pt x 1084.05pt>
+<ohaze_2_1.jpg, id=50, 8230.75pt x 1084.05pt>
 File: ohaze_2_1.jpg Graphic file (type jpg)
 <use ohaze_2_1.jpg>
-Package pdftex.def Info: ohaze_2_1.jpg  used on input line 347.
+Package pdftex.def Info: ohaze_2_1.jpg  used on input line 311.
 (pdftex.def)             Requested size: 469.47046pt x 61.83119pt.
-<ohaze_2_2.jpg, id=50, 8230.75pt x 1084.05pt>
+<ohaze_2_2.jpg, id=51, 8230.75pt x 1084.05pt>
 File: ohaze_2_2.jpg Graphic file (type jpg)
 <use ohaze_2_2.jpg>
-Package pdftex.def Info: ohaze_2_2.jpg  used on input line 350.
+Package pdftex.def Info: ohaze_2_2.jpg  used on input line 314.
 (pdftex.def)             Requested size: 469.47046pt x 61.83119pt.
-<ohaze_3_1.jpg, id=51, 7422.73125pt x 1084.05pt>
+<ohaze_3_1.jpg, id=52, 7422.73125pt x 1084.05pt>
 File: ohaze_3_1.jpg Graphic file (type jpg)
 <use ohaze_3_1.jpg>
-Package pdftex.def Info: ohaze_3_1.jpg  used on input line 353.
+Package pdftex.def Info: ohaze_3_1.jpg  used on input line 317.
 (pdftex.def)             Requested size: 469.47046pt x 68.56348pt.
-<ohaze_3_2.jpg, id=52, 7422.73125pt x 1084.05pt>
+<ohaze_3_2.jpg, id=53, 7422.73125pt x 1084.05pt>
 File: ohaze_3_2.jpg Graphic file (type jpg)
 <use ohaze_3_2.jpg>
-Package pdftex.def Info: ohaze_3_2.jpg  used on input line 356.
+Package pdftex.def Info: ohaze_3_2.jpg  used on input line 320.
 (pdftex.def)             Requested size: 469.47046pt x 68.56348pt.
-<hsts_2.jpg, id=53, 13171.2075pt x 903.375pt>
+<hsts_2.jpg, id=54, 13171.2075pt x 903.375pt>
 File: hsts_2.jpg Graphic file (type jpg)
 <use hsts_2.jpg>
-Package pdftex.def Info: hsts_2.jpg  used on input line 366.
+Package pdftex.def Info: hsts_2.jpg  used on input line 330.
 (pdftex.def)             Requested size: 516.0pt x 35.38448pt.
-<hsts_3.jpg, id=54, 14634.675pt x 1084.05pt>
+<hsts_3.jpg, id=55, 14634.675pt x 1084.05pt>
 File: hsts_3.jpg Graphic file (type jpg)
 <use hsts_3.jpg>
-Package pdftex.def Info: hsts_3.jpg  used on input line 367.
+Package pdftex.def Info: hsts_3.jpg  used on input line 331.
 (pdftex.def)             Requested size: 516.0pt x 38.21028pt.
-<hsts_4.jpg, id=55, 14634.675pt x 1084.05pt>
+<hsts_4.jpg, id=56, 14634.675pt x 1084.05pt>
 File: hsts_4.jpg Graphic file (type jpg)
 <use hsts_4.jpg>
-Package pdftex.def Info: hsts_4.jpg  used on input line 368.
+Package pdftex.def Info: hsts_4.jpg  used on input line 332.
 (pdftex.def)             Requested size: 516.0pt x 38.21028pt.
-<hsts_6.jpg, id=56, 14454.0pt x 903.375pt>
+<hsts_6.jpg, id=57, 14454.0pt x 903.375pt>
 File: hsts_6.jpg Graphic file (type jpg)
 <use hsts_6.jpg>
-Package pdftex.def Info: hsts_6.jpg  used on input line 370.
+Package pdftex.def Info: hsts_6.jpg  used on input line 334.
 (pdftex.def)             Requested size: 516.0pt x 32.24164pt.
-<hsts_7.jpg, id=57, 14426.89874pt x 903.375pt>
+<hsts_7.jpg, id=58, 14426.89874pt x 903.375pt>
 File: hsts_7.jpg Graphic file (type jpg)
 <use hsts_7.jpg>
-Package pdftex.def Info: hsts_7.jpg  used on input line 371.
+Package pdftex.def Info: hsts_7.jpg  used on input line 335.
 (pdftex.def)             Requested size: 516.0pt x 32.31056pt.
-<hsts_8.jpg, id=58, 6504.3pt x 1084.05pt>
+<hsts_8.jpg, id=59, 6504.3pt x 1084.05pt>
 File: hsts_8.jpg Graphic file (type jpg)
 <use hsts_8.jpg>
-Package pdftex.def Info: hsts_8.jpg  used on input line 372.
+Package pdftex.def Info: hsts_8.jpg  used on input line 336.
 (pdftex.def)             Requested size: 516.0pt x 85.99796pt.
-<hsts_9.jpg, id=59, 13668.06375pt x 1003.75pt>
+<hsts_9.jpg, id=60, 13668.06375pt x 1003.75pt>
 File: hsts_9.jpg Graphic file (type jpg)
 <use hsts_9.jpg>
-Package pdftex.def Info: hsts_9.jpg  used on input line 373.
+Package pdftex.def Info: hsts_9.jpg  used on input line 337.
 (pdftex.def)             Requested size: 516.0pt x 37.89171pt.
-<own_6.jpg, id=60, 6775.3125pt x 501.875pt>
+<own_6.jpg, id=61, 6775.3125pt x 501.875pt>
 File: own_6.jpg Graphic file (type jpg)
 <use own_6.jpg>
-Package pdftex.def Info: own_6.jpg  used on input line 382.
+Package pdftex.def Info: own_6.jpg  used on input line 346.
 (pdftex.def)             Requested size: 516.0pt x 38.221pt.
-<own_8.jpg, id=61, 11545.1325pt x 868.24374pt>
+<own_8.jpg, id=62, 11545.1325pt x 868.24374pt>
 File: own_8.jpg Graphic file (type jpg)
 <use own_8.jpg>
-Package pdftex.def Info: own_8.jpg  used on input line 383.
+Package pdftex.def Info: own_8.jpg  used on input line 347.
 (pdftex.def)             Requested size: 516.0pt x 38.8043pt.
-<own_14.jpg, id=62, 8130.375pt x 516.93124pt>
+<own_14.jpg, id=63, 8130.375pt x 516.93124pt>
 File: own_14.jpg Graphic file (type jpg)
 <use own_14.jpg>
-Package pdftex.def Info: own_14.jpg  used on input line 384.
+Package pdftex.def Info: own_14.jpg  used on input line 348.
 (pdftex.def)             Requested size: 516.0pt x 32.80504pt.
-<own_16.jpg, id=63, 8130.375pt x 551.05875pt>
+<own_16.jpg, id=64, 8130.375pt x 551.05875pt>
 File: own_16.jpg Graphic file (type jpg)
 <use own_16.jpg>
-Package pdftex.def Info: own_16.jpg  used on input line 385.
+Package pdftex.def Info: own_16.jpg  used on input line 349.
 (pdftex.def)             Requested size: 516.0pt x 34.97081pt.
-<own_19.jpg, id=64, 12999.56625pt x 1084.05pt>
+<own_19.jpg, id=65, 12999.56625pt x 1084.05pt>
 File: own_19.jpg Graphic file (type jpg)
 <use own_19.jpg>
-Package pdftex.def Info: own_19.jpg  used on input line 386.
+Package pdftex.def Info: own_19.jpg  used on input line 350.
 (pdftex.def)             Requested size: 516.0pt x 43.02379pt.
-<own_24.jpg, id=65, 11563.2pt x 709.65125pt>
+<own_24.jpg, id=66, 11563.2pt x 709.65125pt>
 File: own_24.jpg Graphic file (type jpg)
 <use own_24.jpg>
-Package pdftex.def Info: own_24.jpg  used on input line 387.
+Package pdftex.def Info: own_24.jpg  used on input line 351.
 (pdftex.def)             Requested size: 516.0pt x 31.66222pt.
-<own_26.jpg, id=66, 13008.6pt x 1084.05pt>
+<own_26.jpg, id=67, 13008.6pt x 1084.05pt>
 File: own_26.jpg Graphic file (type jpg)
 <use own_26.jpg>
-Package pdftex.def Info: own_26.jpg  used on input line 388.
+Package pdftex.def Info: own_26.jpg  used on input line 352.
 (pdftex.def)             Requested size: 516.0pt x 42.9907pt.
-<rice_0_1.jpg, id=67, 3171.85pt x 513.92pt>
+<rice_0_1.jpg, id=68, 3171.85pt x 513.92pt>
 File: rice_0_1.jpg Graphic file (type jpg)
 <use rice_0_1.jpg>
-Package pdftex.def Info: rice_0_1.jpg  used on input line 397.
+Package pdftex.def Info: rice_0_1.jpg  used on input line 361.
 (pdftex.def)             Requested size: 412.56496pt x 66.8433pt.
-<rice_0_2.jpg, id=68, 3171.85pt x 513.92pt>
+<rice_0_2.jpg, id=69, 3171.85pt x 513.92pt>
 File: rice_0_2.jpg Graphic file (type jpg)
 <use rice_0_2.jpg>
-Package pdftex.def Info: rice_0_2.jpg  used on input line 400.
+Package pdftex.def Info: rice_0_2.jpg  used on input line 364.
 (pdftex.def)             Requested size: 412.56496pt x 66.8433pt.
-<rice_1_1.jpg, id=69, 3171.85pt x 513.92pt>
+<rice_1_1.jpg, id=70, 3171.85pt x 513.92pt>
 File: rice_1_1.jpg Graphic file (type jpg)
 <use rice_1_1.jpg>
-Package pdftex.def Info: rice_1_1.jpg  used on input line 403.
+Package pdftex.def Info: rice_1_1.jpg  used on input line 367.
 (pdftex.def)             Requested size: 412.56496pt x 66.8433pt.
-<rice_1_2.jpg, id=70, 3171.85pt x 513.92pt>
+<rice_1_2.jpg, id=71, 3171.85pt x 513.92pt>
 File: rice_1_2.jpg Graphic file (type jpg)
 <use rice_1_2.jpg>
-Package pdftex.def Info: rice_1_2.jpg  used on input line 406.
+Package pdftex.def Info: rice_1_2.jpg  used on input line 370.
 (pdftex.def)             Requested size: 412.56496pt x 66.8433pt.
-<rice_2_1.jpg, id=71, 3171.85pt x 513.92pt>
+<rice_2_1.jpg, id=72, 3171.85pt x 513.92pt>
 File: rice_2_1.jpg Graphic file (type jpg)
 <use rice_2_1.jpg>
-Package pdftex.def Info: rice_2_1.jpg  used on input line 409.
+Package pdftex.def Info: rice_2_1.jpg  used on input line 373.
 (pdftex.def)             Requested size: 412.56496pt x 66.8433pt.
-<rice_2_2.jpg, id=72, 3171.85pt x 513.92pt>
+<rice_2_2.jpg, id=73, 3171.85pt x 513.92pt>
 File: rice_2_2.jpg Graphic file (type jpg)
 <use rice_2_2.jpg>
-Package pdftex.def Info: rice_2_2.jpg  used on input line 412.
+Package pdftex.def Info: rice_2_2.jpg  used on input line 376.
 (pdftex.def)             Requested size: 412.56496pt x 66.8433pt.
-<rice_3_1.jpg, id=73, 3171.85pt x 513.92pt>
+<rice_3_1.jpg, id=74, 3171.85pt x 513.92pt>
 File: rice_3_1.jpg Graphic file (type jpg)
 <use rice_3_1.jpg>
-Package pdftex.def Info: rice_3_1.jpg  used on input line 415.
+Package pdftex.def Info: rice_3_1.jpg  used on input line 379.
 (pdftex.def)             Requested size: 412.56496pt x 66.8433pt.
-<rice_3_2.jpg, id=74, 3171.85pt x 513.92pt>
+<rice_3_2.jpg, id=75, 3171.85pt x 513.92pt>
 File: rice_3_2.jpg Graphic file (type jpg)
 <use rice_3_2.jpg>
-Package pdftex.def Info: rice_3_2.jpg  used on input line 418.
+Package pdftex.def Info: rice_3_2.jpg  used on input line 382.
 (pdftex.def)             Requested size: 412.56496pt x 66.8433pt.
-<visual.jpg, id=75, 4396.425pt x 1084.05pt>
+<visual.jpg, id=76, 4396.425pt x 1084.05pt>
 File: visual.jpg Graphic file (type jpg)
 <use visual.jpg>
-Package pdftex.def Info: visual.jpg  used on input line 427.
+Package pdftex.def Info: visual.jpg  used on input line 391.
 (pdftex.def)             Requested size: 516.0pt x 127.21875pt.
-<res15.jpg, id=76, 5856.88126pt x 1084.05pt>
+<res15.jpg, id=77, 5856.88126pt x 1084.05pt>
 File: res15.jpg Graphic file (type jpg)
 <use res15.jpg>
-Package pdftex.def Info: res15.jpg  used on input line 437.
+Package pdftex.def Info: res15.jpg  used on input line 401.
 (pdftex.def)             Requested size: 516.0pt x 95.49263pt.
-<res30.jpg, id=77, 5856.88126pt x 1084.05pt>
+<res30.jpg, id=78, 5856.88126pt x 1084.05pt>
 File: res30.jpg Graphic file (type jpg)
 <use res30.jpg>
-Package pdftex.def Info: res30.jpg  used on input line 446.
+Package pdftex.def Info: res30.jpg  used on input line 410.
 (pdftex.def)             Requested size: 516.0pt x 95.49263pt.
-<res31.jpg, id=78, 5856.88126pt x 1084.05pt>
+<res31.jpg, id=79, 5856.88126pt x 1084.05pt>
 File: res31.jpg Graphic file (type jpg)
 <use res31.jpg>
-Package pdftex.def Info: res31.jpg  used on input line 455.
+Package pdftex.def Info: res31.jpg  used on input line 419.
 (pdftex.def)             Requested size: 516.0pt x 95.49263pt.
-<pic2.jpg, id=79, 5841.825pt x 1084.05pt>
+<pic2.jpg, id=80, 5841.825pt x 1084.05pt>
 File: pic2.jpg Graphic file (type jpg)
 <use pic2.jpg>
-Package pdftex.def Info: pic2.jpg  used on input line 471.
+Package pdftex.def Info: pic2.jpg  used on input line 435.
 (pdftex.def)             Requested size: 516.0pt x 95.74075pt.
-<pic3.jpg, id=80, 1789.68625pt x 162.6075pt>
+<pic3.jpg, id=81, 1789.68625pt x 162.6075pt>
 File: pic3.jpg Graphic file (type jpg)
 <use pic3.jpg>
-Package pdftex.def Info: pic3.jpg  used on input line 481.
+Package pdftex.def Info: pic3.jpg  used on input line 445.
 (pdftex.def)             Requested size: 516.0pt x 46.88203pt.
-<pic4.jpg, id=81, 1789.68625pt x 162.6075pt>
+<pic4.jpg, id=82, 1789.68625pt x 162.6075pt>
 File: pic4.jpg Graphic file (type jpg)
 <use pic4.jpg>
-Package pdftex.def Info: pic4.jpg  used on input line 492.
+Package pdftex.def Info: pic4.jpg  used on input line 456.
 (pdftex.def)             Requested size: 516.0pt x 46.88203pt.
-<rm_pic2.jpg, id=82, 4110.35625pt x 767.86874pt>
+<rm_pic2.jpg, id=83, 4110.35625pt x 767.86874pt>
 File: rm_pic2.jpg Graphic file (type jpg)
 <use rm_pic2.jpg>
-Package pdftex.def Info: rm_pic2.jpg  used on input line 511.
+Package pdftex.def Info: rm_pic2.jpg  used on input line 475.
 (pdftex.def)             Requested size: 516.0pt x 96.39343pt.
-<rm_pic3.jpg, id=83, 1693.32625pt x 153.57375pt>
+<rm_pic3.jpg, id=84, 1693.32625pt x 153.57375pt>
 File: rm_pic3.jpg Graphic file (type jpg)
 <use rm_pic3.jpg>
-Package pdftex.def Info: rm_pic3.jpg  used on input line 520.
+Package pdftex.def Info: rm_pic3.jpg  used on input line 484.
 (pdftex.def)             Requested size: 516.0pt x 46.79657pt.
-<rm_pic4.jpg, id=84, 1693.32625pt x 153.57375pt>
+<rm_pic4.jpg, id=85, 1693.32625pt x 153.57375pt>
 File: rm_pic4.jpg Graphic file (type jpg)
 <use rm_pic4.jpg>
-Package pdftex.def Info: rm_pic4.jpg  used on input line 531.
+Package pdftex.def Info: rm_pic4.jpg  used on input line 495.
 (pdftex.def)             Requested size: 516.0pt x 46.79657pt.
  [6] [7 <./0_1.jpg> <./0_2.jpg> <./1_1.jpg> <./1_2.jpg> <./2_1.jpg> <./2_2.jpg> <./5_1.jpg> <./5_2.jpg>] [8 <./ohaze_0_1.jpg> <./ohaze_0_2.jpg> <./ohaze_1_1.jpg> <./ohaze_1_2.jpg> <./ohaze_2_1.jpg> <./ohaze_2_2.jpg> <./ohaze_3_1.jpg> <./ohaze_3_2.jpg>] [9 <./hsts_2.jpg> <./hsts_3.jpg> <./hsts_4.jpg> <./hsts_6.jpg> <./hsts_7.jpg> <./hsts_8.jpg> <./hsts_9.jpg> <./own_6.jpg> <./own_8.jpg> <./own_14.jpg> <./own_16.jpg> <./own_19.jpg> <./own_24.jpg> <./own_26.jpg>] [10 <./rice_0_1.jpg> <./rice_0_2.jpg> <./rice_1_1.jpg> <./rice_1_2.jpg> <./rice_2_1.jpg> <./rice_2_2.jpg> <./rice_3_1.jpg> <./rice_3_2.jpg>] [11 <./visual.jpg> <./res15.jpg> <./res30.jpg> <./res31.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2498,57 +2498,56 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  (d:/texlive/2022/texmf-dist/tex/latex/utfsym/usym1F5F4.tikz) (d:/texlive/2022/texmf-dist/tex/latex/utfsym/usym1F5F4.tikz) (d:/texlive/2022/texmf-dist/tex/latex/utfsym/usym1F5F4.tikz) (d:/texlive/2022/texmf-dist/tex/latex/utfsym/usym1F5F4.tikz) (d:/texlive/2022/texmf-dist/tex/latex/utfsym/usym1F5F4.tikz) [12 <./pic2.jpg> <./pic3.jpg> <./pic4.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13 <./rm_pic2.jpg> <./rm_pic3.jpg> <./rm_pic4.jpg>] (./main.bbl [14])
-<jyz.jpg, id=115, 1732.4725pt x 2310.6325pt>
+ [13 <./rm_pic2.jpg> <./rm_pic3.jpg> <./rm_pic4.jpg>] (./main.bbl [14]) [15]
+<jyz.jpg, id=118, 1732.4725pt x 2310.6325pt>
 File: jyz.jpg Graphic file (type jpg)
 <use jyz.jpg>
-Package pdftex.def Info: jyz.jpg  used on input line 602.
+Package pdftex.def Info: jyz.jpg  used on input line 646.
 (pdftex.def)             Requested size: 67.7274pt x 90.32938pt.
 File: jyz.jpg Graphic file (type jpg)
 <use jyz.jpg>
-Package pdftex.def Info: jyz.jpg  used on input line 602.
+Package pdftex.def Info: jyz.jpg  used on input line 646.
 (pdftex.def)             Requested size: 67.7274pt x 90.32938pt.
- [15 <./jyz.jpg>]
-<cjx.png, id=122, 481.8pt x 642.4pt>
+<cjx.png, id=121, 481.8pt x 642.4pt>
 File: cjx.png Graphic file (type png)
 <use cjx.png>
-Package pdftex.def Info: cjx.png  used on input line 606.
+Package pdftex.def Info: cjx.png  used on input line 650.
 (pdftex.def)             Requested size: 67.75294pt x 90.33728pt.
 File: cjx.png Graphic file (type png)
 <use cjx.png>
-Package pdftex.def Info: cjx.png  used on input line 606.
+Package pdftex.def Info: cjx.png  used on input line 650.
 (pdftex.def)             Requested size: 67.75294pt x 90.33728pt.
-<tf.png, id=126, 116.946pt x 163.9215pt>
+<tf.png, id=125, 116.946pt x 163.9215pt>
 File: tf.png Graphic file (type png)
 <use tf.png>
-Package pdftex.def Info: tf.png  used on input line 609.
+Package pdftex.def Info: tf.png  used on input line 653.
 (pdftex.def)             Requested size: 64.45076pt x 90.33968pt.
 File: tf.png Graphic file (type png)
 <use tf.png>
-Package pdftex.def Info: tf.png  used on input line 609.
+Package pdftex.def Info: tf.png  used on input line 653.
 (pdftex.def)             Requested size: 64.45076pt x 90.33968pt.
-<hk.png, id=129, 248.93pt x 299.1175pt>
+<hk.png, id=128, 248.93pt x 299.1175pt>
 File: hk.png Graphic file (type png)
 <use hk.png>
-Package pdftex.def Info: hk.png  used on input line 612.
+Package pdftex.def Info: hk.png  used on input line 656.
 (pdftex.def)             Requested size: 72.27141pt x 86.84225pt.
 File: hk.png Graphic file (type png)
 <use hk.png>
-Package pdftex.def Info: hk.png  used on input line 612.
+Package pdftex.def Info: hk.png  used on input line 656.
 (pdftex.def)             Requested size: 72.27141pt x 86.84225pt.
  [16
 
- <./cjx.png> <./tf.png (PNG copy)> <./hk.png>] (./main.aux) ) 
+ <./jyz.jpg> <./cjx.png> <./tf.png (PNG copy)> <./hk.png>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 17931 strings out of 478268
- 336598 string characters out of 5850345
- 651057 words of memory out of 5000000
- 35778 multiletter control sequences out of 15000+600000
- 516185 words of font info for 119 fonts, out of 8000000 for 9000
+ 17939 strings out of 478268
+ 336693 string characters out of 5850345
+ 651334 words of memory out of 5000000
+ 35785 multiletter control sequences out of 15000+600000
+ 517292 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,94p,1459b,789s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,11n,94p,1651b,789s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {d:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (16 pages, 31128723 bytes).
+Output written on main.pdf (16 pages, 31130120 bytes).
 PDF statistics:
  200 PDF objects out of 1000 (max. 8388607)
  88 compressed objects within 1 object stream

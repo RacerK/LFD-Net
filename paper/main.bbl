@@ -21,10 +21,23 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{makarau2014haze}
-A.~Makarau, R.~Richter, R.~M{\"u}ller, and P.~Reinartz, ``Haze detection and
-  removal in remotely sensed multispectral imagery,'' \emph{IEEE Transactions
-  on Geoscience and Remote Sensing}, vol.~52, no.~9, pp. 5895--5905, 2014.
+\bibitem{lillesand2014remote}
+T.~M. Lillesand, R.~W. Kiefer, and J.~W. Chipman, \emph{Remote Sensing and
+  Image Interpretation}.\hskip 1em plus 0.5em minus 0.4em\relax John Wiley \&
+  Sons, 2014.
+
+\bibitem{li2020nasa}
+A.~S. Li, V.~Chirayath, M.~Segal-Rozenhaimer, J.~L. Torres-Perez, and
+  J.~van~den Bergh, ``Nasa nemo-net's convolutional neural network: mapping
+  marine habitats with spectrally heterogeneous remote sensing imagery,''
+  \emph{IEEE journal of selected topics in applied earth observations and
+  remote sensing}, vol.~13, pp. 5115--5133, 2020.
+
+\bibitem{tam2021adaptive}
+P.~Tam, S.~Math, C.~Nam, and S.~Kim, ``Adaptive resource optimized edge
+  federated learning in real-time image sensing classifications,'' \emph{IEEE
+  Journal of Selected Topics in Applied Earth Observations and Remote Sensing},
+  vol.~14, pp. 10\,929--10\,940, 2021.
 
 \bibitem{zheng2022dehaze}
 Y.~Zheng, J.~Su, S.~Zhang, M.~Tao, and L.~Wang, ``Dehaze-aggan: Unpaired remote
@@ -37,10 +50,10 @@ Y.~Han, M.~Yin, P.~Duan, and P.~Ghamisi, ``Edge-preserving filtering-based
   dehazing for remote sensing images,'' \emph{IEEE Geoscience and Remote
   Sensing Letters}, vol.~19, pp. 1--5, 2021.
 
-\bibitem{he2010single}
-K.~He, J.~Sun, and X.~Tang, ``Single image haze removal using dark channel
-  prior,'' \emph{IEEE transactions on pattern analysis and machine
-  intelligence}, vol.~33, no.~12, pp. 2341--2353, 2010.
+\bibitem{makarau2014haze}
+A.~Makarau, R.~Richter, R.~M{\"u}ller, and P.~Reinartz, ``Haze detection and
+  removal in remotely sensed multispectral imagery,'' \emph{IEEE Transactions
+  on Geoscience and Remote Sensing}, vol.~52, no.~9, pp. 5895--5905, 2014.
 
 \bibitem{liu2021semiphysical}
 F.~Liu, Y.~Lv, B.~Li, S.~Gao, and Y.~Qin, ``A semiphysical approach of haze
@@ -69,33 +82,22 @@ R.~Li, R.~T. Tan, and L.-F. Cheong, ``All in one bad weather removal using
   architectural search,'' in \emph{Proceedings of the IEEE/CVF conference on
   computer vision and pattern recognition}, 2020, pp. 3175--3185.
 
-\bibitem{jiao2021guided}
-L.~Jiao, C.~Hu, L.~Huo, and P.~Tang, ``Guided-pix2pix: End-to-end inference and
-  refinement network for image dehazing,'' \emph{IEEE Journal of Selected
-  Topics in Applied Earth Observations and Remote Sensing}, vol.~14, pp.
-  3052--3069, 2021.
+\bibitem{hong2020distilling}
+M.~Hong, Y.~Xie, C.~Li, and Y.~Qu, ``Distilling image dehazing with
+  heterogeneous task imitation,'' in \emph{Proceedings of the IEEE/CVF
+  Conference on Computer Vision and Pattern Recognition}, 2020, pp. 3462--3471.
 
-\bibitem{guo2020joint}
-Y.~Guo, J.~Chen, X.~Ren, A.~Wang, and W.~Wang, ``Joint raindrop and haze
-  removal from a single image,'' \emph{IEEE Transactions on Image Processing},
-  vol.~29, pp. 9508--9519, 2020.
+\bibitem{suresh2022rich}
+A.~Suresh, J.~Nisha, V.~P. Gopi \emph{et~al.}, ``Rich feature distillation with
+  feature affinity module for efficient image dehazing,'' \emph{Optik}, vol.
+  267, p. 169656, 2022.
 
-\bibitem{li2020deep}
-Y.~Li, Y.~Liu, Q.~Yan, and K.~Zhang, ``Deep dehazing network with latent
-  ensembling architecture and adversarial learning,'' \emph{IEEE Transactions
-  on Image Processing}, vol.~30, pp. 1354--1368, 2020.
-
-\bibitem{ding2021perceptual}
-F.~Ding, K.~Yu, Z.~Gu, X.~Li, and Y.~Shi, ``Perceptual enhancement for
-  autonomous vehicles: restoring visually degraded images for context
-  prediction via adversarial training,'' \emph{IEEE Transactions on Intelligent
-  Transportation Systems}, 2021.
-
-\bibitem{2019AttentionGAN}
-H.~Tang, H.~Liu, D.~Xu, P.~Torr, and N.~Sebe, ``Attentiongan: Unpaired
-  image-to-image translation using attention-guided generative adversarial
-  networks,'' \emph{IEEE Transactions on Neural Networks and Learning Systems},
-  2019.
+\bibitem{liu2022aerial}
+L.~Liu, Z.~Meng, K.~Wang, J.~Zhang, and Z.~Wang, ``Aerial image dehazing
+  network compression: Towards micro-uav’s real-time online inferencing,'' in
+  \emph{International Conference on Image, Vision and Intelligent
+  Systems}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2022, pp.
+  442--453.
 
 \bibitem{li2017aod}
 B.~Li, X.~Peng, Z.~Wang, J.~Xu, and D.~Feng, ``Aod-net: All-in-one dehazing
@@ -246,16 +248,12 @@ S.~Woo, J.~Park, J.-Y. Lee, and I.~S. Kweon, ``Cbam: Convolutional block
   computer vision (ECCV)}, 2018, pp. 3--19.
 
 \bibitem{NEURIPS2021_mlp}
-\BIBentryALTinterwordspacing
 I.~O. Tolstikhin, N.~Houlsby, A.~Kolesnikov, L.~Beyer, X.~Zhai, T.~Unterthiner,
   J.~Yung, A.~Steiner, D.~Keysers, J.~Uszkoreit, M.~Lucic, and A.~Dosovitskiy,
   ``Mlp-mixer: An all-mlp architecture for vision,'' in \emph{Advances in
   Neural Information Processing Systems}, M.~Ranzato, A.~Beygelzimer,
   Y.~Dauphin, P.~Liang, and J.~W. Vaughan, Eds., vol.~34.\hskip 1em plus 0.5em
   minus 0.4em\relax Curran Associates, Inc., 2021, pp. 24\,261--24\,272.
-  [Online]. Available:
-  \url{https://proceedings.neurips.cc/paper/2021/file/cba0a4ee5ccd02fda0fe3f9a3e7b89fe-Paper.pdf}
-\BIBentrySTDinterwordspacing
 
 \bibitem{zhao2016loss}
 H.~Zhao, O.~Gallo, I.~Frosio, and J.~Kautz, ``Loss functions for image
@@ -273,6 +271,11 @@ M.~S. Rad, B.~Bozorgtabar, U.-V. Marti, M.~Basler, H.~K. Ekenel, and J.-P.
   Thiran, ``Srobb: Targeted perceptual loss for single image
   super-resolution,'' in \emph{Proceedings of the IEEE/CVF International
   Conference on Computer Vision}, 2019, pp. 2710--2719.
+
+\bibitem{guo2020joint}
+Y.~Guo, J.~Chen, X.~Ren, A.~Wang, and W.~Wang, ``Joint raindrop and haze
+  removal from a single image,'' \emph{IEEE Transactions on Image Processing},
+  vol.~29, pp. 9508--9519, 2020.
 
 \bibitem{li2018reside}
 B.~Li, W.~Ren, D.~Fu, D.~Tao, D.~Feng, W.~Zeng, and Z.~Wang, ``Benchmarking

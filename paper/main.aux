@@ -1,21 +1,20 @@
 \relax 
-\citation{makarau2014haze}
-\citation{zheng2022dehaze,han2021edge}
-\citation{he2010single}
+\citation{lillesand2014remote}
+\citation{li2020nasa,tam2021adaptive}
+\citation{zheng2022dehaze,han2021edge,makarau2014haze}
+\citation{li2020nasa}
 \citation{liu2021semiphysical}
 \citation{xie2021image}
 \citation{cai2016dehazenet}
 \citation{liao2018hdp}
 \citation{li2020all}
-\citation{jiao2021guided}
+\citation{li2020all}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Comparison Metrics on Outdoor SOTS, in terms of PSNR, SSIM, CIEDE2000, $\Delta $SSEQ (vertical-axis) and FPS (horizontal-axis).\relax }}{1}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Comparison Metrics on Outdoor SOTS, in terms of PSNR, SSIM, CIEDE2000, $\Delta $SSEQ ($\uparrow $) and FPS ($\rightarrow $).\relax }}{1}{}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{sample}{{1}{1}}
-\citation{guo2020joint}
-\citation{li2020deep}
-\citation{ding2021perceptual}
-\citation{2019AttentionGAN}
+\citation{hong2020distilling,suresh2022rich}
+\citation{liu2022aerial}
 \citation{li2017aod}
 \citation{2020FAOD}
 \citation{GAOD}
@@ -25,11 +24,13 @@
 \citation{dong2020multi}
 \citation{yang2019wavelet}
 \citation{feng2021urnet}
-\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Feature Extraction}{2}{}\protected@file@percent }
 \citation{lee2020cnn}
 \citation{li2021underwater}
 \citation{mehra2020reviewnet}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{}\protected@file@percent }
+\newlabel{sec:2}{{II}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Feature Extraction}{2}{}\protected@file@percent }
+\newlabel{subsec:2.1}{{\mbox  {II-A}}{2}}
 \citation{liu2019griddehazenet}
 \citation{qin2020ffa}
 \citation{zhang2020multi}
@@ -40,9 +41,10 @@
 \citation{luo2001ciede2000}
 \citation{liu2014sseq}
 \citation{li2017aod}
-\citation{ullah2021light}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Feature Utilization}{3}{}\protected@file@percent }
+\newlabel{subsec:2.2}{{\mbox  {II-B}}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-C}}Quality Evaluation}{3}{}\protected@file@percent }
+\newlabel{subsec:2.3}{{\mbox  {II-C}}{3}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Proposed Method}{3}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Preliminaries}{3}{}\protected@file@percent }
 \newlabel{deqn_ex1}{{1}{3}}
@@ -53,7 +55,7 @@
 \citation{vaswani2017attention}
 \citation{hu2018squeeze,chen2020dynamic,rao2022hornet}
 \citation{ren2018gated,chen2019gated}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Architecture of the Lightweight Feature-interaction Dehazing Network. The reformulated ASM generates a clear output by substituting the evaluated K value. The network primarily consists of convolutional layers and concatenation layers, with the use of element-wise product in the Gated Fusion module and attention mechanism.\relax }}{4}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Architecture of the Lightweight Feature-interaction Dehazing Network. The reformulated ASM generates an explicit output by substituting the evaluated K value. The network primarily consists of convolutional layers and concatenation layers, with the use of element-wise product in the Gated Fusion module and attention mechanism.\relax }}{4}{}\protected@file@percent }
 \newlabel{LFD-Net}{{2}{4}}
 \@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Details of the LFD-Net architecture\relax }}{4}{}\protected@file@percent }
 \newlabel{tab:table1}{{I}{4}}
@@ -68,16 +70,13 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-D}}Attention Mechanism}{5}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The structure of Attention Mechanism. (a), (b) stand for channel-wise attention (CA) and pixel-wise attention (PA) separately. \relax }}{5}{}\protected@file@percent }
 \newlabel{attention}{{3}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-E}}Loss Function}{5}{}\protected@file@percent }
 \citation{li2018reside}
 \citation{ancuti2018ohaze}
 \citation{xia2017aid}
 \citation{lin2019rice}
 \citation{yu2022dair}
 \citation{du2019visdrone}
-\citation{xia2017aid}
-\citation{lin2019rice}
-\citation{yu2022dair}
-\citation{du2019visdrone}
 \citation{li2017aod}
 \citation{liu2019griddehazenet}
 \citation{yang2019wavelet}
@@ -246,59 +245,66 @@
 \citation{msbdn2020}
 \citation{yang2022d4}
 \citation{dehazeformer}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-E}}Loss Function}{6}{}\protected@file@percent }
+\citation{li2017aod}
+\citation{ullah2021light}
+\citation{yang2022d4}
+\citation{chen2019gated}
+\citation{qin2020ffa}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Experiments}{6}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Dataset}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Experiment Results}{6}{}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Average Comparison of Metrics on SOTS for 492 JPG Images\relax }}{6}{}\protected@file@percent }
 \newlabel{tab:sots}{{II}{6}}
 \@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Average Comparison of Metrics on O-HAZE for 45 JPG Images\relax }}{6}{}\protected@file@percent }
 \newlabel{tab:ohaze}{{III}{6}}
 \@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Average Comparison of Metrics on RICE1 for 500 PNG Images\relax }}{6}{}\protected@file@percent }
 \newlabel{tab:rice}{{IV}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Experiment Results}{6}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Visual Comparison on Outdoor SOTS. We compare our methods with AOD-Net\cite  {li2017aod}, GridDehazeNet\cite  {liu2019griddehazenet}, Wavelet-U-Net\cite  {yang2019wavelet}, GCA-Net\cite  {chen2019gated}, FFA-Net\cite  {qin2020ffa}, LD-Net\cite  {ullah2021light} and D4\cite  {yang2022d4}. Our proposed method exhibits adaptability to diverse scenarios and possesses a noteworthy level of generalization.\relax }}{7}{}\protected@file@percent }
 \newlabel{sots}{{4}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Visual Comparison Results on O-HAZE. We compare our methods with AOD-Net\cite  {li2017aod}, GridDehazeNet\cite  {liu2019griddehazenet}, Wavelet-U-Net\cite  {yang2019wavelet}, GCA-Net\cite  {chen2019gated}, FFA-Net\cite  {qin2020ffa}, LD-Net\cite  {ullah2021light} and D4\cite  {yang2022d4}. AOD-Net and LD-Net produce relatively dark in visual quality. GCA-Net performs well on irregular haze but suffers from inconsistency in color blocks. Our proposed method exhibits adaptability to diverse scenarios and possesses a noteworthy level of generalization. \relax }}{8}{}\protected@file@percent }
 \newlabel{ohaze}{{5}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Visual Comparison Results on Real-world HSTS. (a) Hazy image, (b) AOD-Net\cite  {li2017aod}, (c) GridDehazeNet\cite  {liu2019griddehazenet}, (d) Wavelet-U-Net\cite  {yang2019wavelet}, (e) GCA-Net\cite  {chen2019gated}, (f) FFA-Net\cite  {qin2020ffa}, (g) LD-Net\cite  {ullah2021light}, (h) D4\cite  {yang2022d4} and (i) Ours. Our proposed method exhibits adaptability to diverse scenarios and possesses a noteworthy level of generalization.\relax }}{9}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Visual Comparison Results on Real-world HSTS. (a) Hazy image, (b) AOD-Net\cite  {li2017aod}, (c) GridDehazeNet\cite  {liu2019griddehazenet}, (d) Wavelet-U-Net\cite  {yang2019wavelet}, (e) GCA-Net\cite  {chen2019gated}, (f) FFA-Net\cite  {qin2020ffa}, (g) LD-Net\cite  {ullah2021light}, (h) D4\cite  {yang2022d4} and (i) Ours (LFD-Net). Our proposed method exhibits adaptability to diverse scenarios and possesses a noteworthy level of generalization.\relax }}{9}{}\protected@file@percent }
 \newlabel{hsts}{{6}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Visual Comparison Results on Randomly Selected Real-world Images. (a) Hazy image, (b) AOD-Net\cite  {li2017aod}, (c) GridDehazeNet\cite  {liu2019griddehazenet}, (d) Wavelet-U-Net\cite  {yang2019wavelet}, (e) GCA-Net\cite  {chen2019gated}, (f) FFA-Net\cite  {qin2020ffa}, (g) LD-Net\cite  {ullah2021light}, (h) D4\cite  {yang2022d4} and (i) Ours. Our proposed method exhibits adaptability to diverse scenarios and possesses a noteworthy level of generalization.\relax }}{9}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Visual Comparison Results on Randomly Selected Real-world Images. (a) Hazy image, (b) AOD-Net\cite  {li2017aod}, (c) GridDehazeNet\cite  {liu2019griddehazenet}, (d) Wavelet-U-Net\cite  {yang2019wavelet}, (e) GCA-Net\cite  {chen2019gated}, (f) FFA-Net\cite  {qin2020ffa}, (g) LD-Net\cite  {ullah2021light}, (h) D4\cite  {yang2022d4} and (i) Ours (LFD-Net). Our proposed method exhibits adaptability to diverse scenarios and possesses a noteworthy level of generalization.\relax }}{9}{}\protected@file@percent }
 \newlabel{own}{{7}{9}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Visual Comparison Results on O-HAZE. We compare our methods with AOD-Net\cite  {li2017aod}, GridDehazeNet\cite  {liu2019griddehazenet}, Wavelet-U-Net\cite  {yang2019wavelet}, GCA-Net\cite  {chen2019gated}, FFA-Net\cite  {qin2020ffa}, LD-Net\cite  {ullah2021light} and D4\cite  {yang2022d4}. AOD-Net and LD-Net produce relatively dark in visual quality. GCA-Net performs well on irregular haze but suffers from inconsistency in color blocks. Our proposed method exhibits adaptability to diverse scenarios and possesses a noteworthy level of generalization. \relax }}{10}{}\protected@file@percent }
 \newlabel{rice}{{8}{10}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Visualization Results of the changes in layers before and after the Gated Fusion Module: (a) represents the three output feature maps of the convolutional operation \textit  {Conv 4} incorporated into Gated Fusion module, (b)-(d) stand for the changes in the 15th, 30th and 31st feature map of the layers respectively. (b) shows that the contrast of the image is enhanced, resulting in distant objects becoming more distinct. (c) and (d) show more abstract feature representations, which are significantly shifted compared to the input. Specifically, (c) emphasizes the outline of substances, while (d) highlights the blocks within substances.\relax }}{11}{}\protected@file@percent }
 \newlabel{visual}{{9}{11}}
+\citation{yang2019wavelet}
+\citation{liu2019griddehazenet}
+\citation{ronneberger2015u}
 \citation{li2017aod}
 \citation{ullah2021light}
-\citation{chen2019gated}
-\citation{chen2019gated}
-\citation{qin2020ffa}
-\citation{li2017aod}
-\citation{ullah2021light}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Reference Object Detection Results: (a) comparison of object detection results under ordinary, simulated hazy, and dehazed conditions, (b)-(e) detailed sub-scenes of detection results. (b) and (c) show an improvement in the detection rate. (d) corrects the error of mistaking a roadblock for a car in the hazy condition. (e) shows the detection of another car compared to the ground-truth clear image.\relax }}{12}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Reference Object Detection Results: (a) comparison of object detection results under ordinary, simulated hazy, and dehazed conditions, (b)-(e) detailed sub-scenes of detection results \leavevmode {\color  {blue}under different conditions}. \leavevmode {\color  {blue}(b) and (c) demonstrate an improvement in the detection rate, detecting an additional car instance in the dehazed condition compared to the hazy condition.} (d) corrects the error of mistaking a roadblock for a car in the hazy condition. (e) shows the detection of another car compared to the ground-truth clear image.\relax }}{12}{}\protected@file@percent }
 \newlabel{object_detection}{{10}{12}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Ablation Study}{12}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Reference Remote Sensing Object Detection Results: (a) comparison of remote sensing object detection results under ordinary, simulated hazy, and dehazed conditions, (b)-(e) detailed sub-scenes of detection results, in which the detection rate for pedestrians is enhanced to a large extent. In particular, (b) and (e) highlight instances of pedestrians that are not visible in the ordinary conditions but are detected after dehazing, similar to the results from DAIR-V2X.\relax }}{13}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Reference Remote Sensing Object Detection Results: (a) comparison of remote sensing object detection results under ordinary, simulated hazy, and dehazed conditions, (b)-(e) detailed sub-scenes of detection results \leavevmode {\color  {blue}under different conditions}, in which the detection rate for pedestrians is enhanced to a large extent. In particular, (b) and (e) highlight instances of pedestrians that are not visible in the ordinary conditions but are detected after dehazing, similar to the results from DAIR-V2X.\relax }}{13}{}\protected@file@percent }
 \newlabel{remote_object_detection}{{11}{13}}
-\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Ablation Experiment of LFD-Net on Outdoor SOTS Dataset\relax }}{13}{}\protected@file@percent }
-\newlabel{tab:ablation}{{V}{13}}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces \leavevmode {\color  {blue}Comparison of the Parameters of Models}\relax }}{13}{}\protected@file@percent }
+\newlabel{tab:model_size}{{V}{13}}
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Ablation Experiment of LFD-Net on Outdoor SOTS Dataset\relax }}{13}{}\protected@file@percent }
+\newlabel{tab:ablation}{{VI}{13}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Visualization Results}{13}{}\protected@file@percent }
 \bibstyle{IEEEtran}
 \bibdata{ref}
-\bibcite{makarau2014haze}{1}
-\bibcite{zheng2022dehaze}{2}
-\bibcite{han2021edge}{3}
-\bibcite{he2010single}{4}
-\bibcite{liu2021semiphysical}{5}
-\bibcite{xie2021image}{6}
-\bibcite{cai2016dehazenet}{7}
-\bibcite{liao2018hdp}{8}
-\bibcite{li2020all}{9}
-\bibcite{jiao2021guided}{10}
-\bibcite{guo2020joint}{11}
-\bibcite{li2020deep}{12}
-\bibcite{ding2021perceptual}{13}
-\bibcite{2019AttentionGAN}{14}
+\bibcite{lillesand2014remote}{1}
+\bibcite{li2020nasa}{2}
+\bibcite{tam2021adaptive}{3}
+\bibcite{zheng2022dehaze}{4}
+\bibcite{han2021edge}{5}
+\bibcite{makarau2014haze}{6}
+\bibcite{liu2021semiphysical}{7}
+\bibcite{xie2021image}{8}
+\bibcite{cai2016dehazenet}{9}
+\bibcite{liao2018hdp}{10}
+\bibcite{li2020all}{11}
+\bibcite{hong2020distilling}{12}
+\bibcite{suresh2022rich}{13}
+\bibcite{liu2022aerial}{14}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-E}}Application for Object Detection Task}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{14}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{14}{}\protected@file@percent }
 \bibcite{li2017aod}{15}
 \bibcite{2020FAOD}{16}
 \bibcite{GAOD}{17}
@@ -306,9 +312,6 @@
 \bibcite{ullah2021light}{19}
 \bibcite{ronneberger2015u}{20}
 \bibcite{dong2020multi}{21}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-E}}Application for Object Detection Task}{14}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{14}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{14}{}\protected@file@percent }
 \bibcite{yang2019wavelet}{22}
 \bibcite{feng2021urnet}{23}
 \bibcite{lee2020cnn}{24}
@@ -334,17 +337,18 @@
 \bibcite{zhao2016loss}{44}
 \bibcite{lim2017enhanced}{45}
 \bibcite{rad2019srobb}{46}
-\bibcite{li2018reside}{47}
-\bibcite{ancuti2018ohaze}{48}
-\bibcite{xia2017aid}{49}
-\bibcite{lin2019rice}{50}
-\bibcite{yu2022dair}{51}
-\bibcite{du2019visdrone}{52}
-\bibcite{yang2022d4}{53}
-\bibcite{msbdn2020}{54}
-\bibcite{dehazeformer}{55}
-\@writefile{toc}{\contentsline {section}{Biographies}{15}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{Yizhu Jin}{15}{}\protected@file@percent }
+\bibcite{guo2020joint}{47}
+\bibcite{li2018reside}{48}
+\bibcite{ancuti2018ohaze}{49}
+\bibcite{xia2017aid}{50}
+\bibcite{lin2019rice}{51}
+\bibcite{yu2022dair}{52}
+\bibcite{du2019visdrone}{53}
+\bibcite{yang2022d4}{54}
+\bibcite{msbdn2020}{55}
+\bibcite{dehazeformer}{56}
+\@writefile{toc}{\contentsline {section}{Biographies}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Yizhu Jin}{16}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{Jiaxing Chen}{16}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{Feng Tian}{16}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{Kun Hu}{16}{}\protected@file@percent }

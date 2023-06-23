@@ -1,6 +1,6 @@
 # LFD-Net
 
-### Lightweight Feature-interaction Dehazing Network for Real-time Vision Tasks
+### Lightweight Feature-interaction Dehazing Network for Real-time Remote Sensing Tasks
 
 ![](readme_images/framework.jpg)
 
