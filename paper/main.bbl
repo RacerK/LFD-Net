@@ -82,6 +82,12 @@ R.~Li, R.~T. Tan, and L.-F. Cheong, ``All in one bad weather removal using
   architectural search,'' in \emph{Proceedings of the IEEE/CVF conference on
   computer vision and pattern recognition}, 2020, pp. 3175--3185.
 
+\bibitem{jiao2021guided}
+L.~Jiao, C.~Hu, L.~Huo, and P.~Tang, ``Guided-pix2pix: End-to-end inference and
+  refinement network for image dehazing,'' \emph{IEEE Journal of Selected
+  Topics in Applied Earth Observations and Remote Sensing}, vol.~14, pp.
+  3052--3069, 2021.
+
 \bibitem{hong2020distilling}
 M.~Hong, Y.~Xie, C.~Li, and Y.~Qu, ``Distilling image dehazing with
   heterogeneous task imitation,'' in \emph{Proceedings of the IEEE/CVF
